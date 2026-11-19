@@ -221,3 +221,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# bmon-data-analysis: per-user files
+bmon_data/settings_local.py
+bmon_init.sql

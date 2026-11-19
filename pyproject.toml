@@ -1,0 +1,21 @@
+[project]
+name = "bmon-data-analysis"
+version = "0.1.0"
+description = "Documentation and sample code for ad hoc, read-only queries of the data in a BMON application."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "duckdb>=1.2",
+    "pandas>=2.0",
+    "pytz>=2026.6",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["bmon_data"]
+
+[project.scripts]
+make-duckdb-init = "bmon_data.duckdb_init:main"
